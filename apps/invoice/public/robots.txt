@@ -1,0 +1,3 @@
+# robots.txt — Block all crawlers completely
+User-agent: *
+Disallow: /
