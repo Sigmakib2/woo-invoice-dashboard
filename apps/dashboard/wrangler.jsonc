@@ -1,0 +1,52 @@
+{
+  "name": "woo-invoice-dashboard",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-09-01",
+
+  // ALL CONFIG HERE (INSECURE FOR SECRETS)
+  "vars": {
+    // Non-secret
+    "SUPABASE_URL": "https://*********.supabase.co",
+    "WC_API_URL": "https://yourdomain.com",
+    "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/******************************qZDvq",
+
+    // AUthentication
+    "ADMIN_USERNAME":"admin",
+    "ADMIN_PASSWORD":"admin",
+    "JWT_SECRET":"give your own secret",
+    "API_KEY": "give your own api key for the api if you want to use it to something else like mobile app or desktop app",
+
+    //invoice urls(the subdomain where you want to serve the invoices)
+    "INVOICE_SUBDOMAIN":"invoice.your domain.com",
+
+    // SECRETS (INSECURE IF COMMITTED / SHARED)
+    "SUPABASE_SERVICE_ROLE_KEY": "*******************.*******************",
+    "WC_WEBHOOK_SECRET": "this is a secret",
+    "WC_CONSUMER_KEY": "ck_********************************",
+    "WC_CONSUMER_SECRET": "cs_********************************"
+  },
+  //"observability.logs":{
+    //"enabled": true
+  //},
+
+  // Optional: environment-specific overrides (still inline)
+  "env": {
+    "dev": {
+      "vars": {
+        "WC_API_URL": "https://your domain.com"
+      }
+    },
+    "staging": {
+      "vars": {
+        "SUPABASE_URL": "https://*******.supabase.co",
+        "WC_API_URL": "https://your domain.com"
+      }
+    },
+    "production": {
+      "vars": {
+        "SUPABASE_URL": "https://*******.supabase.co",
+        "WC_API_URL": "https://your domain.com"
+      }
+    }
+  }
+}
